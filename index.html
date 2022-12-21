@@ -33,12 +33,12 @@
 		</div>
 	</body>
 	<script>
-		$.ajax({ type:'GET', url: 'https://api.allorigins.win/raw?url='+ encodeURIComponent('https://github.com/computerhealer/tutorials/file-list/main'), success: function(html){ 
+		$.ajax({ type:'GET', url: 'https://api.allorigins.win/raw?url='+ encodeURIComponent('https://github.com/thecomputerhealer/tutorials/file-list/main'), success: function(html){ 
 				m = null;
 				console.log(html);
-				regex = /<div role="rowheader".*?>.*?<a.*?href="\/computerhealer\/tutorials\/commit\/(.*?)">(\d{4}): (.*?)<\/a>.*?<time-ago.*?>(.*?)<\/time-ago>/gmsi
+				regex = /<div role="rowheader".*?>.*?<a.*?href="\/thecomputerhealer\/tutorials\/commit\/(.*?)">(\d{4}): (.*?)<\/a>.*?<time-ago.*?>(.*?)<\/time-ago>/gmsi
 				while ( (m = regex.exec( html )) != null  ){
-          $('#tutorialList').append('<tr><td align="center">'+ m[2] +'</td><td align="left"><a href="https://computerhealer.github.io/tutorials/'+ m[2] +'.html" target="_blank">'+ m[3] +'</a></td><td align="center">'+ m[4] +'</td></tr>');
+          $('#tutorialList').append('<tr><td align="center">'+ m[2] +'</td><td align="left"><a href="https://thecomputerhealer.github.io/tutorials/'+ m[2] +'.html" target="_blank">'+ m[3] +'</a></td><td align="center">'+ m[4] +'</td></tr>');
 				}
 				initTable();
 			}
