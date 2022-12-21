@@ -32,7 +32,3 @@ span.copy-animation-cmd { animation: textSelectCMD 0.75s linear; }
 @keyframes textSelect { 0% { background-color:#000; color: #0f0; } 30% { background: #0f0; color: #000; box-shadow: inset 100px 0 0 0 #0f0; } 70% { background: #0f0; color: #000; } 100% {background-color:#000; color: #0f0; } }
 @keyframes textSelectPS { 0% { background-color:#012456; color: #eeedf0; } 30% { background: #eeedf0; color: #012456; box-shadow: inset 100px 0 0 0 #eeedf0; } 70% { background: #eeedf0; color: #012456; } 100% {background-color:#012456; color: #eeedf0; } }
 @keyframes textSelectCMD { 0% { background-color:#000; color: #eeedf0; } 30% { background: #eeedf0; color: #000; box-shadow: inset 100px 0 0 0 #eeedf0; } 70% { background: #eeedf0; color: #000; } 100% {background-color:#000; color: #eeedf0; } }
-
-#footerLinks { justify-self: center; padding-top: 15px; }
-#footerLinks img { display: inline-block; max-height: 50px; opacity: 0.8; justify-self: center; margin: 5px; transition: opacity 0.35s linear; }
-#footerLinks img:hover { opacity: 1; }
