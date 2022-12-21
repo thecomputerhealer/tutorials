@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>i12bretro Tutorials</title>
+		<title>The Computer Healer Tutorials</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
@@ -33,12 +33,12 @@
 		</div>
 	</body>
 	<script>
-		$.ajax({ type:'GET', url: 'https://api.allorigins.win/raw?url='+ encodeURIComponent('https://github.com/i12bretro/tutorials/file-list/main'), success: function(html){ 
+		$.ajax({ type:'GET', url: 'https://api.allorigins.win/raw?url='+ encodeURIComponent('https://github.com/computerhealer/tutorials/file-list/main'), success: function(html){ 
 				m = null;
 				console.log(html);
-				regex = /<div role="rowheader".*?>.*?<a.*?href="\/i12bretro\/tutorials\/commit\/(.*?)">(\d{4}): (.*?)<\/a>.*?<time-ago.*?>(.*?)<\/time-ago>/gmsi
+				regex = /<div role="rowheader".*?>.*?<a.*?href="\/computerhealer\/tutorials\/commit\/(.*?)">(\d{4}): (.*?)<\/a>.*?<time-ago.*?>(.*?)<\/time-ago>/gmsi
 				while ( (m = regex.exec( html )) != null  ){
-          $('#tutorialList').append('<tr><td align="center">'+ m[2] +'</td><td align="left"><a href="https://i12bretro.github.io/tutorials/'+ m[2] +'.html" target="_blank">'+ m[3] +'</a></td><td align="center">'+ m[4] +'</td></tr>');
+          $('#tutorialList').append('<tr><td align="center">'+ m[2] +'</td><td align="left"><a href="https://computerhealer.github.io/tutorials/'+ m[2] +'.html" target="_blank">'+ m[3] +'</a></td><td align="center">'+ m[4] +'</td></tr>');
 				}
 				initTable();
 			}
