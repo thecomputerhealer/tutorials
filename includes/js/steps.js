@@ -66,12 +66,3 @@ $(function(){
       }
     });
   });
-
-  $('#gridContainer').append('<div>&nbsp;</div><div id="footerLinks"></div>');
-  $.ajax({ url: './includes/sites.json', type: 'get', dataType: 'json', success: function(r){
-      $.each(r, function(k,v){
-        $('#footerLinks').append(`<a href="${r[k].url}" target="_blank"><img src="${r[k].icon}" alt="${r[k].text}" title="${r[k].text}" /></a>`);
-      });
-    }
-  });
-});
